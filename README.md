@@ -32,5 +32,12 @@ A simple Unity C# example that adds a jump system to your player controller — 
 - CapsuleCollider
 - Create a jump script that is attached to your player and copy/paste the code in the SimpleJumpActionNewInputAction Script in this repo!
 - Don't forget to assign the Serialize components in the inspector
+
+- Helpful Pictures below:
 - This is what my heirarchy looks like
 - ![image](https://github.com/user-attachments/assets/30b08276-27c9-48f8-96c7-f1fdc6719bed)
+- ![image](https://github.com/user-attachments/assets/31432098-1b7f-4142-a806-a717dd87c23b)
+- ![image](https://github.com/user-attachments/assets/c14eb19f-b557-488b-b1a3-e880b69b4a4a)
+- ![image](https://github.com/user-attachments/assets/9f8d7789-f0d8-44ef-a20e-776a56fd05a1)
+- ![image](https://github.com/user-attachments/assets/07ffc468-4c19-486c-aea1-08bff6cc7098)
+
