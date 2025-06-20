@@ -1,31 +1,44 @@
-# Simple-JumpAction-NewInputSystem
-Simple Unity jump system using Rigidbody with a SphereCast-based grounded check. Works with Unity's new Input System. Easy to drop into any project.
-
 # Unity Jump System with Grounded Check
 
-This is a simple example of a player jump system in Unity — using Rigidbody physics and a SphereCast-based grounded check to detect when the player is on the ground.
-
-It also works with Unity's new Input System (InputAction.CallbackContext).
-
-## Features
-
-- Basic jump logic using Rigidbody.AddForce (Impulse)
-- Ground detection with SphereCast (works better on uneven terrain than simple raycasts)
-- Debug visual (green/red ray) to help you see grounded state in Scene view
-- Easily adjustable jump height and ground radius
-- Simple and lightweight — easy to drop into your own project
-
-## Usage
-
-Just copy the `IsGrounded()` function and `OnJumpPerformed()` function into your player controller script.
-
-You’ll need:
-- A Rigidbody on your player GameObject
-- A CapsuleCollider (or similar) attached
-- A jump input set up with Unity’s new Input System
-
-## License
-
-MIT — free to use in any project (personal or commercial). No attribution required.
+A simple Unity C# example that adds a jump system to your player controller — using Rigidbody physics, SphereCast-based ground check, and Unity's new Input System.
 
 ---
+
+## 🎮 Features
+
+- Jump using AddForce with customizable jump height
+- SphereCast-based grounded check (handles uneven terrain)
+- Optional extra gravity when falling (makes jump feel snappier)
+- Debug visualization (green = grounded, red = not grounded)
+- Works with Unity's new Input System
+
+---
+
+## 🛠 Requirements
+
+- Rigidbody on the player GameObject  
+- CapsuleCollider on the player GameObject  
+- Unity's new Input System (`PlayerInputActions` generated)
+
+---
+
+## 📋 How To Add This To Your PlayerController Script
+
+---
+
+### 1️⃣ Required Components on Player GameObject
+
+- Rigidbody (Use Gravity = true)
+- CapsuleCollider
+
+---
+
+### 2️⃣ Variables to add:
+
+```csharp
+public PlayerInputActions playerInput;
+private Rigidbody rb;
+private CapsuleCollider capsuleCollider;
+[SerializeField] private bool isGrounded = true;
+[SerializeField] private float jumpHeight = 9f;
+[SerializeField] private float gravityMultiplier = 2f;
